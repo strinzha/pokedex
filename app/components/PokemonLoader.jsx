@@ -2,14 +2,14 @@ import React from 'react';
 import './PokemonLoader.scss';
 
 const PokemonLoader = React.createClass({
-  render() {    
+    render() {
         return (
-        <div className="PokemonLoader">
-          <div className="PokemonLoader__spinner">
-            <div className="PokemonLoader__cube1"></div>
-            <div className="PokemonLoader__cube2"></div>
-          </div>                    
-        </div>
+            <div className="PokemonLoader">
+                <div className="PokemonLoader__spinner">
+                    <div className="PokemonLoader__cube1"></div>
+                    <div className="PokemonLoader__cube2"></div>
+                </div>
+            </div>
         );
     }
 });
