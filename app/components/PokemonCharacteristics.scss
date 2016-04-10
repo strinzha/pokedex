@@ -1,0 +1,40 @@
+.PokemonCharacteristics {
+  position: fixed;
+  top: 50%;
+  right: 100px;
+  transform: translate(0, -50%);
+  border: 1px solid #ccc;
+  margin: 10px;
+  padding: 25px;
+  text-align: center;
+  min-width: 350px;
+  &__title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  &__table {
+    width: 100%;
+    text-align: left;
+    border-spacing: 0px;
+    border-collapse: collapse;;
+    tr {
+      td {
+        border: 1px solid #999;
+        padding: 10px;
+        span {
+          margin-right: 5px;
+          text-transform: capitalize;
+          &:after {
+            content: ",";
+          }
+          &:last-child {
+            &:after {
+              content: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

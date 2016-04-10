@@ -1,0 +1,15 @@
+.PokemonMore {
+  text-align: center;
+  width: 100%;
+  &__button {
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #2A8DFF;
+    color: #fff;
+    width: 30%;
+    padding: 20px 0;
+    font-size: 24px;
+    cursor: pointer;
+  }
+}
