@@ -1,6 +1,11 @@
 # Pokedex
 
-Clone repository
+Go to
+
+```
+http://strinzha.github.io/pokedex/public/
+```
+Or clone repository
 
 ```
 git clone https://github.com/strinzha/pokedex.git
@@ -18,6 +23,7 @@ npm install
 ```
 
 ### Run app
+
 To run app use command:
 
 ```
