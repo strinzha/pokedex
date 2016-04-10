@@ -19,7 +19,7 @@ function formatPokemon(pokemon) {
     };
 }
 
-const TasksStore = Object.assign({}, EventEmitter.prototype, {
+const PokedexStore = Object.assign({}, EventEmitter.prototype, {
     isLoading() {
         return _isLoading;
     },
@@ -29,7 +29,7 @@ const TasksStore = Object.assign({}, EventEmitter.prototype, {
     getCharacteristics() {
         return _characteristics;
     },
-    getOffset() {        
+    getOffset() {
         return _offset;
     },
     emitChange() {
@@ -49,7 +49,7 @@ AppDispatcher.register(function(action) {
     switch(action.type) {
         case AppConstants.LOAD_POKEMONS_REQUEST: {
             _isLoading = true;
-            TasksStore.emitChange();
+            PokedexStore.emitChange();
             break;
         }
 
@@ -57,19 +57,19 @@ AppDispatcher.register(function(action) {
             _isLoading = false;
             _pokemons = action.pokemons.objects.map( formatPokemon );
             _loadingError = null;
-            TasksStore.emitChange();
+            PokedexStore.emitChange();
             break;
         }
 
         case AppConstants.LOAD_POKEMONS_FAIL: {
             _loadingError = action.error;
-            TasksStore.emitChange();
+            PokedexStore.emitChange();
             break;
         }
 
         case AppConstants.LOAD_CHARACTERISTICS_REQUEST: {
             _isLoading = true;
-            TasksStore.emitChange();
+            PokedexStore.emitChange();
             break;
         }
 
@@ -78,13 +78,13 @@ AppDispatcher.register(function(action) {
             _characteristics = action.characteristics;
             _loadingError = null;
 
-            TasksStore.emitChange();
+            PokedexStore.emitChange();
             break;
         }
 
         case AppConstants.LOAD_MORE_REQUEST: {
             _isLoading = true;
-            TasksStore.emitChange();
+            PokedexStore.emitChange();
             break;
         }
 
@@ -94,7 +94,7 @@ AppDispatcher.register(function(action) {
 
             _loadingError = null;
             _offset += 12;
-            TasksStore.emitChange();
+            PokedexStore.emitChange();
             break;
         }
 
@@ -104,4 +104,4 @@ AppDispatcher.register(function(action) {
     }
 });
 
-export default TasksStore;
+export default PokedexStore;
